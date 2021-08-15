@@ -16,6 +16,7 @@
         integrity="sha512-xnP2tOaCJnzp2d2IqKFcxuOiVCbuessxM6wuiolT9eeEJCyy0Vhcwa4zQvdrZNVqlqaxXhHqsSV1Ww7T2jSCUQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -403,6 +404,39 @@
             </div>
         </section>
         <!-- End of instructors section -->
+
+        <!-- Begin of Contact & Map Section -->
+        <section class="p-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-4">Contact Info</h2>
+                        <ul class="list-group list-group-flush lead">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> Lorem ipsum dolor sit amet.
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> Lorem ipsum dolor sit amet.
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> Lorem ipsum dolor sit amet.
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> Lorem ipsum dolor sit amet.
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> Lorem ipsum dolor sit amet.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md">
+                        <div id="map" style="width: 100%; height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Contact & Map Section -->
+
     </main>
 
     <!-- Bootstrap JS -->
@@ -410,6 +444,16 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibW9oYW1tYWRtcmF5eWFuIiwiYSI6ImNrc2Q1Y29heTBoeXMydnAycnIybnVpeTEifQ.hZP5puNXWjr82RU0lqdNvg';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+        });
+        </script>
 </body>
 
 </html>
